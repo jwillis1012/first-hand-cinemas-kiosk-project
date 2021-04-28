@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/defaults.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/avi1rol.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="page-movie-selection">
+
+  <div class="top-buttons">
+    <a class="back" href="main-page.html"> Back </a>
+    <a class="profile" href="profile.html"> Profile </a>
+  </div>
+
+<section class="info-selection">
+  
+  <div class="movie-title-info">
+    <img src="img/aladdin.jpg">
+    <h3> Name of Movie </h3>
+  </div>
+
+  <div class="time">
+    <h2> Select Desired Time:</h2>
+    <a class="time-select" id="option1" onclick="changeColor('option1'); return false;">1:45 pm</a>
+    <a class="time-select" id="option2" onclick="changeColor('option2'); return false;">3:30 pm</a>
+    <a class="time-select" id="option3" onclick="changeColor('option3'); return false;">5:15 pm</a>
+    <a class="time-select" id="option4" onclick="changeColor('option4'); return false;">8:00 pm</a>
+
+  </div>
+
+  <div class="ticket-numbers">
+    <h2> Number Of Tickets </h2>
+      <input id="ticket-selector" type="number" min="1" max="30" placeholder="1">
+  </div>
+
+  <a class="add-to-cart"> Add To Cart </a>
+
+
+</section>
+
+<div class="overlay hide" id="overlay">
+  <div class="content">
+    <h1 class="order">Order Confirmed</h1>
+    <h2 class="title-movie"> Movie </h2>
+    <p class="confirmed-time">1:45 pm</p>
+    <ul class="prices">
+      <p class="confirmed-tickets"> Tickets 3x</p>
+    <p class="price"> Price: $11.95</p>
+    <p class="total"> Total: $35.85</p>
+    </ul>
+    <a class="proceed" href="print-tickets-linked-to-cart.html"> Proceed To Checkout </a>
+    <a class="continue" href="main-page-with-cart.html"> Continue Shopping </a>
+  </div>
+</div> 
+
+
+ 
+
+  <!-- Related JavaScript files -->
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+</body>
+
+</html>

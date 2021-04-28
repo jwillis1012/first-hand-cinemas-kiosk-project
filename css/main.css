@@ -1,0 +1,719 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  background:radial-gradient(#A6212C, #8C1C25, #66141B);
+  padding:2rem;
+  color:white;
+}
+
+h1{
+  font-family: chaparral-pro-display, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+a{
+  font-family: chaparral-pro-display, serif;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration:none;
+  color:white;
+}
+
+h2{
+  font-family: chaparral-pro-display, serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h3{
+  font-family: chaparral-pro-caption, serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h4{
+  font-family: chaparral-pro-caption, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p{
+  font-family: chaparral-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Login Page.. index.html*/
+
+.login{
+  justify-items:center;
+  align-items:center;
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:repeat(3,auto);
+}
+
+span{
+  display:block;
+}
+
+.login h1{
+  font-size:6rem;
+  text-align:center;
+  font-family: chaparral-pro-caption, serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.login h2{
+  font-size:3rem;
+  text-align:center;
+  margin-bottom:0;
+  padding-bottom:0;
+  font-family: chaparral-pro-caption, serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+form{
+  display:grid;
+  grid-template-columns:auto 20rem;
+  grid-template-rows:repeat(4,1fr);
+  grid-gap:2rem;
+  align-items:center;
+  justify-items:center;
+  left:50%;
+  right:50%;
+  margin-top:-1rem;
+}
+
+.login-link{
+  grid-column:1 /span 2;
+  grid-row:3;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  border-style:solid;
+  border-width:4px;
+  border-color:#F25757;
+  background-color:white;
+  color:black;
+  font-size:2rem;
+  padding-left:2rem;
+  padding-right:2rem;
+  text-decoration:none;
+}
+
+.new-user-link{
+  grid-column:1 /span 2;
+  grid-row:4;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-decoration:none;
+  color:white;
+  font-size:1.5rem;
+}
+
+input{
+  width:20rem;
+  height:2.5rem;
+  border-style:solid;
+  border-width:4px;
+  border-color:#F25757;
+}
+
+label{
+  font-size:2.5rem;
+  justify-self:left;
+}
+
+
+/*For New User Login*/
+.login p{
+  font-size:3rem;
+  margin-top:5rem;
+  margin-bottom:5rem;
+  text-align:center;
+}
+
+.login-link-new{
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  grid-column: 1 /span 2;
+  border-style:solid;
+  border-width:4px;
+  border-color:#F25757;
+  background-color:white;
+  color:black;
+  font-size:2rem;
+  padding-left:2rem;
+  padding-right:2rem;
+  text-decoration:none;
+}
+
+/* Main Page for Returning User.. main-page.html*/
+.main-page{
+  display:grid;
+  grid-template-columns:auto;
+  grid-template-rows:repeat(2,auto);
+  grid-template-rows:repeat(2,auto);
+  grid-gap:2rem;
+  text-align:center;
+  align-items:center;
+  justify-items:center;
+}
+
+.top-buttons{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+}
+
+.top-buttons-with-cart{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows:repeat(2,auto);
+}
+
+.back{
+  text-align:left;
+  text-decoration:none;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color:white;
+  font-size:3rem;
+  cursor:pointer;
+}
+
+.profile{
+  text-align:right;
+  text-decoration:none;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color:white;
+  font-size:3rem;
+  cursor:pointer;
+}
+
+.view-your-cart{
+  grid-column:1 /span 2;
+  grid-row:2;
+  text-decoration:none;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color:white;
+  font-size:3rem;
+  cursor:pointer;
+  align-self:center;
+}
+
+.sorting{
+  grid-column:1;
+  grid-row:2;
+  margin:0;
+  padding:0;
+}
+
+.sort{
+  font-size:2rem; 
+  font-family: chaparral-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+  color:white;
+  margin-top:0;
+}
+
+.genre-active{
+  display:inline-block;
+  border-style:solid;
+  border-width:4px;
+  border-color:#F25757;
+  padding:1rem;
+  margin:0;
+ font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size:2rem;
+  width:20rem;
+  cursor:pointer;
+  text-decoration:none;
+  color:white;
+}
+
+.new-movies-not-active{
+  display:inline-block;
+  border-style:solid;
+  border-width:4px;
+  border-color:#707070;
+  padding:1rem;
+  margin:0;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size:2rem;
+  width:20rem;
+  cursor:pointer;
+  text-decoration:none;
+  color:white;
+}
+
+.movies{
+  grid-column:1;
+  grid-row:3;
+  display:grid;
+  grid-template-columns:60rem;
+  grid-template-rows:repeat(10,auto);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .7s;
+}
+
+.open {
+  max-height: 100rem;
+}
+
+button {
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  padding: .5rem 1rem;
+  border-style:solid;
+  border-width:4px;
+  border-color:#F25757;
+  padding:1rem;
+  background-color: transparent;
+  margin:3rem;
+  width:20rem;
+  font-size:2rem;
+  color:white;
+  align-self:center;
+  justify-self:center;
+  cursor:pointer;
+}
+
+
+.horror{
+  grid-row:1;
+  text-align:center;
+  font-family: chaparral-pro-display, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.comedy{
+  grid-row:3;
+  text-align:center;
+  font-family: chaparral-pro-display, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.romance{
+  grid-row:5;
+  text-align:center;
+  font-family: chaparral-pro-display, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.thriller{
+  grid-row:7;
+  text-align:center;
+  font-family: chaparral-pro-display, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.adventure{
+  grid-row:9;
+  text-align:center;
+  font-family: chaparral-pro-display, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container .one{
+  width: 100%;
+  display:block;
+  overflow:hidden;
+}
+
+.container .two{
+  width: 100%;
+  display:block;
+  overflow:hidden;
+}
+
+.carousel{
+  display:block;
+  width: 100%;
+  height: 400px;
+  overflow-x: scroll;
+  overflow-y:hidden;
+  padding: 10px;
+  margin: 0;
+  white-space: nowrap; 
+}
+
+.item {
+    display: inline-block;
+    width: auto;
+    margin: 0 10px;
+    height: 20rem;
+    position:relative;
+    box-shadow: .25rem .25rem .25rem .25rem black;
+}
+
+.item div{
+  position:absolute;
+  text-align:center;
+}
+
+img{
+  height:20rem;
+  width:auto;
+}
+
+
+/*New To Theaters Page.. Code specific to new-movies.html*/
+.new-to-theaters{
+  grid-column:1;
+  grid-row:3;
+  display:grid;
+  grid-template-columns:repeat(4,15rem);
+  grid-template-rows:repeat(4,auto);
+  grid-gap:1rem;
+}
+
+.new{
+  grid-column:1 /span 4;
+  grid-row:1;
+}
+
+.new-to-theaters .item{
+  margin-bottom:3rem;
+}
+
+.genre-not-active{
+  display:inline-block;
+  border-style:solid;
+  border-width:4px;
+  border-color:#707070;
+  padding:1rem;
+  margin:0;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size:2rem;
+  width:20rem;
+  cursor:pointer;
+  text-decoration:none;
+  color:white;
+}
+
+.new-movies-active{
+  display:inline-block;
+  border-style:solid;
+  border-width:4px;
+  border-color:#F25757;
+  padding:1rem;
+  margin:0;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal; 
+  font-size:2rem;
+  width:20rem;
+  cursor:pointer;
+  text-decoration:none;
+  color:white;
+}
+
+/* Movie Selection Info... movie-selection.html*/
+
+.info-selection{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:repeat(4,auto);
+  justify-items:center;
+  align-items:center;
+  grid-gap:2rem;
+}
+
+
+.movie-title-info{
+  text-align:center;
+  justify-items:center;
+  align-items:center;
+}
+
+.movie-title-info img{
+  height:30rem;
+  width:auto;
+}
+
+.time{
+  width:40rem;
+  display:grid;
+  grid-template-columns:auto auto;
+  grid-template-rows:repeat(4,3rem);
+  align-items:center;
+  justify-items:center;
+  padding:0;
+}
+
+.time .ticket-numbers h2{
+  font-size:2rem;
+}
+
+.time-select{
+  grid-column:2;
+  font-size:2rem;
+  cursor:pointer;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ticket-numbers{
+  display:grid;
+  grid-template-columns:auto auto;
+}
+
+.ticket-numbers h2{
+  padding-right:2.5rem;
+}
+
+.ticket-numbers input{
+  width:25rem;
+  height:4rem;
+  align-self:center;
+  justify-self:center;
+  padding:1rem;
+  font-size:2rem;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.add-to-cart{
+  font-size:4rem;
+  padding-top:2rem;
+}
+
+.hidden{
+  visibility:hidden;
+  transition: all .2s;
+}
+
+.button{
+  visibility:hidden;
+}
+
+.hide{
+  display:none !important;
+}
+
+.overlay{
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100vh; 
+  overflow: auto; 
+  display: grid;
+  place-items: center;
+  background-color:rgba(0, 0, 0, .8);
+}
+
+.overlay .content{
+  display:grid;
+  grid-template-columns:auto auto;
+  grid-template-rows:repeat(5, auto);
+  background-color:white;
+  color:black;
+  width:40rem;
+  max-height:none;
+  text-align:center;
+  align-items:center;
+  justify-items:center;
+  padding:2rem;
+  border-radius:20%;  
+  border-style:solid;
+  border-width:1rem;
+  border-color:#66141B;
+  overflow:auto;
+}
+
+.overlay a{
+  color:black;
+}
+
+.overlay .order{
+  grid-column:1 /span 2;
+  grid-row:1;
+}
+
+.overlay .title-movie{
+  grid-column:1;
+  grid-row:2;
+}
+
+.overlay .confirmed-time{
+  grid-column:2;
+  grid-row:2;
+}
+
+.overlay .prices{
+  grid-column:1 /span 2;
+  grid-row:3;
+} 
+
+.overlay .proceed{
+  grid-column:1 /span 2;
+  grid-row:4;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  padding: .5rem .5rem;
+  border-style:solid;
+  border-width:4px;
+  border-color:#F25757;
+  padding:1rem;
+  background-color: transparent;
+  margin:3rem;
+  width:30rem;
+  font-size:2rem;
+  color:black;
+  align-self:center;
+  justify-self:center;
+  cursor:pointer;
+}
+
+.overlay .continue{
+  grid-column:1 /span 2;
+  grid-row:5;
+  font-size:1.5rem;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-top:-1rem;
+}
+ 
+
+ /*Print Tickets Page... print-tickets.html*/
+
+ .your-order{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  grid-template-rows:repeat(3, auto);
+  text-align:center;
+  align-items:center;
+  justify-items:center;
+  grid-gap:1rem;
+}
+
+.order{
+  grid-column:1 /span 2;
+  grid-row:1;
+  font-size:3rem;
+}
+
+.title-movie{
+  grid-column:3;
+  grid-row:1;
+  font-size:2rem;
+}
+
+.confirmed-time{
+  grid-column:4;
+  grid-row:1;
+  font-size:1.5rem;
+}
+
+.prices{
+  grid-column:3 /span 2;
+  grid-row:2;
+  padding:0;
+  margin:0;
+  font-size:1.5rem;
+}
+
+.print{
+  grid-column:1 /span 4;
+  grid-row:3;
+  font-size:4rem;
+}
+
+/*Profile Page... profile.html*/
+.profile-page{
+  display:grid;
+  grid-template-columns:auto;
+  grid-template-rows:repeat(4,auto);
+  grid-gap:2rem;
+  text-align:center;
+  align-items:center;
+  justify-items:center;
+}
+
+.cart{
+  text-align:right;
+  text-decoration:none;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color:white;
+  font-size:3rem;
+  cursor:pointer;
+}
+
+.profile-info{
+  grid-column:1;
+  grid-row:2;
+  display:grid;
+  grid-template-rows:1fr auto;
+}
+
+.profile-info i{
+  font-size:15rem;
+  border:solid 4px #F25757;
+  border-radius:50%;
+  padding:2rem;
+}
+
+footer{
+  display:grid;
+  grid-template-columns:1fr auto auto auto;
+  align-tems:center;
+  justify-items:center;
+  grid-gap:2rem;
+}
+
+footer h2{
+  justify-self:center;
+  align-self:center;
+  text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
